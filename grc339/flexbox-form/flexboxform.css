@@ -6,12 +6,12 @@ body {
 	color: #222;
 	background-color: #fafafa;
 	box-sizing: border-box;
-	}
-	
+}
+
 div.container {
-        max-width: 40em;
-        margin: 1em;
-        padding 1em;
+	max-width: 40em;
+	margin: 1em;
+	padding: 1em;
 }
 
 header {
@@ -20,8 +20,8 @@ header {
 
 
 section.personal-info ul li {
-	display: _____;
-	flex-wrap: _____;
+	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 1em;
 }
 
@@ -29,39 +29,41 @@ section.personal-info ul li input[type="text"],
 section ul li input[type="email"],
 section ul li input[type="tel"],
 section ul li select {
-	flex: _____;
+	flex: 4 0 20em;
 	box-sizing: border-box;
 }
 
 section.personal-info ul li label {
-	flex: _____;
+	flex: 0 0 10em;
 }
 
-section.order ul, section.method ul {
-	display: _____;
-	flex-wrap: _____;
-	}
+section.order ul,
+section.method ul {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-section.order ul li , section.method ul li {
-	flex: _____;
-	}
-	
-	
+section.order ul li,
+section.method ul li {
+	flex: 1 0 15em;
+}
+
+
 h3 {
 	margin: 2em 0 0;
-	}
+}
 
 ul {
 	padding: 0;
 	list-style-type: none;
-	}
-	
+}
 
-	
+
+
 section {
-    background: #eee;
-    padding: 1em;
-    margin-bottom: 1em;
+	background: #eee;
+	padding: 1em;
+	margin-bottom: 1em;
 }
 
 section p {
@@ -70,20 +72,20 @@ section p {
 
 textarea {
 	box-sizing: border-box;
-	display: _____;
-	width: _____;
+	display: block;
+	width: 100%;
 	height: 6em;
 	background: #fcfcfc;
 	border: 1px solid #e8e8e8;
 	padding: 0.4em;
 	font-family: sans-serif;
 	color: #777;
-	}
+}
 
 @media only screen and (min-width: 40em) {
 
-  div.container {
-    margin: _____;
-  }
+	div.container {
+		margin: auto;
+	}
 
 }
