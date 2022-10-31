@@ -7,9 +7,15 @@ body {
 }
 
 div.container {
-    max-width: 30em;
-    margin: auto;
+    max-width: 40em;
+    /* justify-content: center; */
+    margin: 0 auto;
+    background: red;
+    /* overflow: hidden; */
+}
 
+main {
+    border: gray 2px solid;
 }
 
 p, figcaption, h3, h2, h1{
@@ -17,12 +23,14 @@ p, figcaption, h3, h2, h1{
     font-style: normal;
 }
 
+
 h3, h2{
     text-transform: uppercase;
 }
 
 figure {
     margin: 2em 0em;
+    border: solid 2px teal;
 }
 
 img {
@@ -39,10 +47,12 @@ figcaption{
     font-size: .8em;
 }
 
+
 h1 {
     padding-top: .5em;
     margin-bottom: 0em;
     border-bottom: .05em solid #00030A;
+    width: 10em;
 }
 
 h2{
@@ -65,12 +75,16 @@ article h3{
 
 section {
     box-shadow: .3em .3em 1em #00030a14;
-    padding: 1em 1em 2em;
-    margin: .5em 0em 1.5em;
+    margin: 0 auto 3em;
+    padding: 2em;
+    border: solid orange 2px;
 }
+
 
 section a:hover{
     color: #18468A;
+
+
 }
 
 p{
@@ -95,12 +109,12 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
-    padding-right: 0.05em;
+    padding-right: .9em;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 nav ul li a {
@@ -134,10 +148,61 @@ li:nth-child(5) a {
 
 
 aside{
-    box-shadow: .0em .0em 0em #00030a14;
-    border-top: .1em solid #00030A;
+    /* box-shadow: .0em .0em 0em #00030a14; */
     padding-top: 0em;
-    margin: 3em 0em 0em;
+    margin: 0em 2em;
+}
+
+@media screen and (min-width: 60em)
+{
+    div.container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 0 1em;
+    }
+
+    header{
+        grid-column: 1/3;
+    }
+
+    main{
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0 1em;
+    }
+
+    section.mainstory{
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    section.mainstory figure{
+        flex: 1 0 10em;
+    }
+
+    /* section.mainstory figure img{
+        height: 100%;
+    } */
+
+    section.mainstory h3{
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    section.mainstory p{
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+
+    aside{
+        grid-column: 2/3;
+    }
+
 }
 
 
